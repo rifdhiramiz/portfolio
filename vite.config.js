@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Use / for local dev, /my_portfolio/ for production
-  base: process.env.NODE_ENV === "production" ? "/portfolio/" : "/",
+  // 👇 Important: must match your repo name ("portfolio")
+  base: '/portfolio/',
   plugins: [
     react(),
-    tailwindcss()
-  ]
-});
+    tailwindcss(),
+  ],
+})
