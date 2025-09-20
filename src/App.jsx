@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -8,7 +8,6 @@ import Services from "./components/Services";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Qualifications from "./components/Qualifications";
-
 import Work from "./components/Work";
 import "./index.css";
 
@@ -16,7 +15,6 @@ export default function App() {
   return (
     <Router>
       <Routes>
-
         <Route
           path="/"
           element={
@@ -25,7 +23,7 @@ export default function App() {
               <div className="flex-grow">
                 <Home />
                 <About />
-                <Work/>
+                <Work />
                 <Skills />
                 <Projects />
                 <Qualifications />
