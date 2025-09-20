@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --color-dark-blue: #192332;
+  --color-dark2-blue: #C09A64;
+  --color-light-blue: #afe1e3;
+  
+}
+
+@theme {
+  --color-darkblue: #0A101D;   /* Dark Blue */
+  --color-secondary: #192332; /* Purple */
+  --color-gold: #C09A64; /* Gold */
+}
+
+/*bg-gradient-to-r from-black via-gray-900 to-gray-800*/
