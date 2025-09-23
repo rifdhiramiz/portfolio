@@ -1,7 +1,7 @@
 import { useState } from "react";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-// Import images from src/assets
+// ✅ Import images from src/assets
 import Sport1 from "../assets/SportZoneHub/Picture1.png";
 import Sport2 from "../assets/SportZoneHub/Picture2.png";
 import Sport3 from "../assets/SportZoneHub/Picture3.png";
@@ -55,18 +55,23 @@ export default function Projects() {
     <section id="projects" className="bg-darkblue py-16">
       <div className="max-w-4xl mx-auto px-6">
         <div style={{ fontFamily: '"Times New Roman", Times, serif' }}>
+          {/* Heading */}
           <h1 className="text-4xl md:text-5xl font-extrabold text-gold mb-6 text-center">
             My Projects
           </h1>
           <div className="w-24 h-1 bg-gold mx-auto mb-12"></div>
 
-          {/* Project Carousel */}
+          {/* Project Card */}
           <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 shadow-lg p-6 relative rounded-3xl border border-white">
-            {/* Project Title */}
-            <h2 className="text-3xl font-bold text-gold mb-4 text-center">{project.title}</h2>
+            {/* Title */}
+            <h2 className="text-3xl font-bold text-gold mb-4 text-center">
+              {project.title}
+            </h2>
 
             {/* Description */}
-            <p className="text-gray-400 mb-4 text-xl text-center">{project.description}</p>
+            <p className="text-gray-400 mb-4 text-xl text-center">
+              {project.description}
+            </p>
 
             {/* Languages */}
             <div className="mb-4">
@@ -87,7 +92,9 @@ export default function Projects() {
 
             {/* Problems */}
             <div className="mb-6 text-center">
-              <h4 className="text-white font-semibold mb-2 text-lg">Problems Solved</h4>
+              <h4 className="text-white font-semibold mb-2 text-lg">
+                Problems Solved
+              </h4>
               <ul className="list-disc list-inside text-gray-400 space-y-1 text-left inline-block">
                 {project.problems.map((prob, i) => (
                   <li key={i}>{prob}</li>
@@ -95,7 +102,7 @@ export default function Projects() {
               </ul>
             </div>
 
-            {/* Project Image with Project Navigation */}
+            {/* Image + Navigation */}
             <div className="relative w-full mb-6 flex justify-center">
               <img
                 src={project.images[currentImage]}
@@ -103,7 +110,7 @@ export default function Projects() {
                 className="w-[350px] h-[200px] object-cover rounded-xl shadow-lg"
               />
 
-              {/* Prev Project Button */}
+              {/* Prev Project */}
               <button
                 onClick={prevProject}
                 className="absolute top-1/2 left-2 transform -translate-y-1/2
@@ -113,7 +120,7 @@ export default function Projects() {
                 <i className="fas fa-chevron-left text-gold text-2xl"></i>
               </button>
 
-              {/* Next Project Button */}
+              {/* Next Project */}
               <button
                 onClick={nextProject}
                 className="absolute top-1/2 right-2 transform -translate-y-1/2
@@ -124,7 +131,7 @@ export default function Projects() {
               </button>
             </div>
 
-            {/* Image Dots */}
+            {/* Dots */}
             <div className="flex justify-center mb-6 space-x-2">
               {project.images.map((_, idx) => (
                 <button
