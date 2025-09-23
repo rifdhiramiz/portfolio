@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "../assets/RR_Logo.png"; // ✅ Import image from src/assets
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,20 +8,22 @@ export default function Navbar() {
     <nav className="bg-gradient-to-r from-black via-gray-900 to-gray-800 text-gold fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* Logo */}
+        {/* Logo + Name */}
         <div className="flex items-center space-x-3">
+          {/* Show logo only on small/medium */}
           <img
-            src="/Portfolio 2.png"   // <-- replace with your logo path
+            src={logo}
             alt="Logo"
-            className="h-10 w-10 object-contain rounded-full"
+            className="h-10 w-10 object-contain block lg:hidden"
           />
-          <h1 className="text-2xl font-bold tracking-wide">
+          {/* Show name only on lg+ */}
+          <h1 className="hidden lg:block text-2xl font-bold tracking-wide">
             Mohamed Ramiz Mohamed Rifdhi
           </h1>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-lg">
+        {/* Desktop Menu (lg+) */}
+        <ul className="hidden lg:flex space-x-8 text-lg">
           <li><a href="#home" className="hover:text-white transition duration-300">Home</a></li>
           <li><a href="#about" className="hover:text-white transition duration-300">About</a></li>
           <li><a href="#work" className="hover:text-white transition duration-300">Work</a></li>
@@ -31,8 +34,8 @@ export default function Navbar() {
           <li><a href="#contact" className="hover:text-white transition duration-300">Contact</a></li>
         </ul>
 
-        {/* Mobile Hamburger Button */}
-        <div className="md:hidden">
+        {/* Mobile Hamburger Button (sm+md only) */}
+        <div className="lg:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
             {isOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,9 +50,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (sm+md only) */}
       <div
-        className={`md:hidden bg-gradient-to-b from-black via-gray-900 to-gray-800 transition-max-height duration-500 overflow-hidden ${
+        className={`lg:hidden bg-gradient-to-b from-black via-gray-900 to-gray-800 transition-max-height duration-500 overflow-hidden ${
           isOpen ? "max-h-96 py-4" : "max-h-0"
         }`}
       >

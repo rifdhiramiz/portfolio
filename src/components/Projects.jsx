@@ -1,15 +1,20 @@
 import { useState } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+// Import images from src/assets
+import Sport1 from "../assets/SportZoneHub/Picture1.png";
+import Sport2 from "../assets/SportZoneHub/Picture2.png";
+import Sport3 from "../assets/SportZoneHub/Picture3.png";
+
+import Car12 from "../assets/ABC_Car_Traders/Picture12.png";
+import Car13 from "../assets/ABC_Car_Traders/Picture13.png";
+import Car14 from "../assets/ABC_Car_Traders/Picture14.png";
+
 export default function Projects() {
   const projects = [
     {
       title: "SportZoneHub",
-      images: [
-        "/SportZoneHub/Picture1.png",
-        "/SportZoneHub/Picture2.png",
-        "/SportZoneHub/Picture3.png",
-      ],
+      images: [Sport1, Sport2, Sport3],
       description: "Responsive E-commerce Solution for Sports Shops",
       languages: ["PHP", "CodeIgniter", "Microsoft SQL Server"],
       problems: [
@@ -20,13 +25,9 @@ export default function Projects() {
     },
     {
       title: "ABC Car Traders",
-      images: [
-        "/ABC Car Traders/Picture12.png",
-        "/ABC Car Traders/Picture13.png",
-        "/ABC Car Traders/Picture14.png",
-      ],
+      images: [Car12, Car13, Car14],
       description: "Excellence in Cars and Services",
-      languages: ["C#","Microsoft SQL Server"],
+      languages: ["C#", "Microsoft SQL Server"],
       problems: [
         "Simplify car trading with a web platform.",
         "Showcase available cars with detailed info and images.",
@@ -62,10 +63,10 @@ export default function Projects() {
           {/* Project Carousel */}
           <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 shadow-lg p-6 relative rounded-3xl border border-white">
             {/* Project Title */}
-            <h2 className="text-3xl font-bold text-gold mb-4  text-center">{project.title}</h2>
+            <h2 className="text-3xl font-bold text-gold mb-4 text-center">{project.title}</h2>
 
             {/* Description */}
-            <p className="text-gray-400 mb-4 text-xl  text-center">{project.description}</p>
+            <p className="text-gray-400 mb-4 text-xl text-center">{project.description}</p>
 
             {/* Languages */}
             <div className="mb-4">
@@ -86,7 +87,7 @@ export default function Projects() {
 
             {/* Problems */}
             <div className="mb-6 text-center">
-              <h4 className="text-white font-semibold mb-2 text-lg ">Problems Solved</h4>
+              <h4 className="text-white font-semibold mb-2 text-lg">Problems Solved</h4>
               <ul className="list-disc list-inside text-gray-400 space-y-1 text-left inline-block">
                 {project.problems.map((prob, i) => (
                   <li key={i}>{prob}</li>

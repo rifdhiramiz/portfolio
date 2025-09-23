@@ -1,9 +1,12 @@
+import DigiwebLogo from "../assets/Digiweb.jpg";
+import EternalStackLogo from "../assets/EternalStack.png";
+
 export default function Work() {
   const experiences = [
     {
       role: "Junior Frontend Developer",
       company: "Digiweb Solutions",
-      logo: "/Digiweb.jpg",
+      logo: DigiwebLogo,
       period: "Jan 2025 – Jun 2025",
       description: [
         "Built and maintained responsive, AI-enhanced websites with regular content updates.",
@@ -16,7 +19,7 @@ export default function Work() {
     {
       role: "Senior Developer",
       company: "EternalStack Solutions",
-      logo: "/EternalStack.png",
+      logo: EternalStackLogo,
       period: "Jul 2025 – Present",
       description: [
         "Architect and design scalable applications, ensuring performance, maintainability, and reliability.",
@@ -55,13 +58,13 @@ export default function Work() {
               <img
                 src={exp.logo}
                 alt={exp.company}
-                className="w-10 h-10 rounded-full mr-3  object-cover"
+                className="w-10 h-10 rounded-full mr-3 object-cover"
               />
               <p className="text-lg text-white font-semibold">{exp.company}</p>
             </div>
 
             {/* Period */}
-            <p className="text-sm text-white  mb-4">{exp.period}</p>
+            <p className="text-sm text-white mb-4">{exp.period}</p>
 
             {/* Description */}
             <ul className="list-disc pl-6 space-y-2 text-gray-400 marker:text-white">

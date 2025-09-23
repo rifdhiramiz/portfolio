@@ -14,7 +14,7 @@ export default function About() {
         {/* Row 1: Image Left + Paragraph Right */}
         <div className="flex flex-col md:flex-row items-start gap-12">
           <img
-            src="HCL visit.jpg"
+            src="HCL_visit.jpg"
             alt="Profile 1"
             className="rounded-2xl shadow-lg object-cover h-78 w-full md:w-1/2"
           />
@@ -29,7 +29,7 @@ export default function About() {
         {/* Row 2: Image Left + Paragraph Right */}
         <div className="flex flex-col md:flex-row items-start gap-16">
           <img
-            src="HCL visit 2.jpg"
+            src="HCL_visit2.jpg"
             alt="Profile 2"
             className="rounded-2xl shadow-lg object-cover h-78 w-full md:w-1/2"
           />
