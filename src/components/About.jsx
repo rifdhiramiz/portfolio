@@ -20,7 +20,7 @@ export default function About() {
           <img
             src={HCL1}
             alt="Profile 1"
-            className="rounded-2xl shadow-lg object-cover w-full md:w-1/2"
+            className="rounded-2xl shadow-lg object-cover h-78 w-full md:w-1/2"
           />
           <p className="text-lg leading-relaxed w-full md:w-1/2 text-gray-400">
             I’m an IT undergraduate and aspiring software engineer with a deep
@@ -36,7 +36,7 @@ export default function About() {
           <img
             src={HCL2}
             alt="Profile 2"
-            className="rounded-2xl shadow-lg object-cover w-full md:w-1/2"
+            className="rounded-2xl shadow-lg object-cover h-78 w-full md:w-1/2"
           />
           <p className="text-lg leading-relaxed w-full md:w-1/2 text-gray-400">
             Currently, I’m working as a Junior Frontend Developer at Digiweb

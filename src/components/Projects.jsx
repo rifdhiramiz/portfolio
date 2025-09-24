@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-// ✅ Import images from src/assets
-import Sport1 from "../assets/SportZoneHub/Picture1.png";
-import Sport2 from "../assets/SportZoneHub/Picture2.png";
-import Sport3 from "../assets/SportZoneHub/Picture3.png";
+// Import images from src/assets
+import Sport1 from "../assets/Picture1.png";
+import Sport2 from "../assets/Picture2.png";
+import Sport3 from "../assets/Picture3.png";
 
-import Car12 from "../assets/ABC_Car_Traders/Picture12.png";
-import Car13 from "../assets/ABC_Car_Traders/Picture13.png";
-import Car14 from "../assets/ABC_Car_Traders/Picture14.png";
+import Car12 from "../assets/Picture12.png";
+import Car13 from "../assets/Picture13.png";
+import Car14 from "../assets/Picture14.png";
 
 export default function Projects() {
   const projects = [
@@ -102,7 +102,7 @@ export default function Projects() {
               </ul>
             </div>
 
-            {/* Image + Navigation */}
+            {/* Image + Nav Buttons */}
             <div className="relative w-full mb-6 flex justify-center">
               <img
                 src={project.images[currentImage]}
@@ -110,7 +110,7 @@ export default function Projects() {
                 className="w-[350px] h-[200px] object-cover rounded-xl shadow-lg"
               />
 
-              {/* Prev Project */}
+              {/* Prev Button */}
               <button
                 onClick={prevProject}
                 className="absolute top-1/2 left-2 transform -translate-y-1/2
@@ -120,7 +120,7 @@ export default function Projects() {
                 <i className="fas fa-chevron-left text-gold text-2xl"></i>
               </button>
 
-              {/* Next Project */}
+              {/* Next Button */}
               <button
                 onClick={nextProject}
                 className="absolute top-1/2 right-2 transform -translate-y-1/2
